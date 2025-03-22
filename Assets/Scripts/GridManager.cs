@@ -196,7 +196,7 @@ public class GridManager : MonoBehaviour
     /// <summary>
     /// Gets a grid element with its coordinates.
     /// </summary>
-    GridElement GetGridElementAt(int row, int col)
+    public GridElement GetGridElementAt(int row, int col)
     {
         if (row >= 0 && row < gridSize && col >= 0 && col < gridSize)
             return gridElements[row * gridSize + col];
@@ -221,7 +221,7 @@ public class GridManager : MonoBehaviour
     /// <summary>
     /// Converts a column letter to a column index.
     /// </summary>
-    int ConvertColumnLetterToIndex(string column)
+    public int ConvertColumnLetterToIndex(string column)
     {
         int index = 0;
         foreach (char c in column)
@@ -257,7 +257,7 @@ public class GridManager : MonoBehaviour
     public void SetGridElementOccupation(GridElement gridElement, bool occupied)
     {
         gridElement.occupied = occupied;
-        gridElement._image.color = occupied ? Color.red : Color.white;
+        gridElement._image.color = occupied ? Color.grey : Color.white;
     }
 
     #endregion
